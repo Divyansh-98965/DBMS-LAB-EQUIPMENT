@@ -1,0 +1,47 @@
+graph ER {
+graph [rankdir=LR, splines=polyline, nodesep=0.42, ranksep=0.72, pad=0.25, bgcolor="white", labelloc=t, labeljust=l, fontname="Arial", fontsize=22, fontcolor="#172b43"];
+node [fontname="Arial", fontsize=12, color="#202020", fontcolor="#111111", penwidth=1.35, style="filled", fillcolor="white", margin="0.12,0.08"];
+edge [fontname="Arial", fontsize=10, color="#333333", fontcolor="#333333", penwidth=1.1, dir=none];
+ labelloc=t; label="01  ORGANISATION & LABORATORIES";
+departments [shape=box, label="Departments", width=1.55, height=0.62, penwidth=1.7];
+departments_0 [shape=ellipse, label=<<U>department_id</U>>, fontsize=10, margin="0.09,0.05"];
+departments -- departments_0 [color="#777777", penwidth=0.85];
+departments_1 [shape=ellipse, label=<department_name (UK)>, fontsize=10, margin="0.09,0.05"];
+departments -- departments_1 [color="#777777", penwidth=0.85];
+departments_2 [shape=ellipse, label=<department_code (UK)>, fontsize=10, margin="0.09,0.05"];
+departments -- departments_2 [color="#777777", penwidth=0.85];
+users [shape=box, label="Users", width=1.55, height=0.62, penwidth=1.7];
+users_0 [shape=ellipse, label=<<U>user_id</U>>, fontsize=10, margin="0.09,0.05"];
+users -- users_0 [color="#777777", penwidth=0.85];
+users_1 [shape=ellipse, label=<university_id (UK)>, fontsize=10, margin="0.09,0.05"];
+users -- users_1 [color="#777777", penwidth=0.85];
+users_2 [shape=ellipse, label=<full_name>, fontsize=10, margin="0.09,0.05"];
+users -- users_2 [color="#777777", penwidth=0.85];
+users_3 [shape=ellipse, label=<email (UK)>, fontsize=10, margin="0.09,0.05"];
+users -- users_3 [color="#777777", penwidth=0.85];
+users_4 [shape=ellipse, label=<department_id (FK)>, fontsize=10, margin="0.09,0.05"];
+users -- users_4 [color="#777777", penwidth=0.85];
+users_5 [shape=ellipse, label=<role>, fontsize=10, margin="0.09,0.05"];
+users -- users_5 [color="#777777", penwidth=0.85];
+laboratories [shape=box, label="Laboratories", width=1.55, height=0.62, penwidth=1.7];
+laboratories_0 [shape=ellipse, label=<<U>lab_id</U>>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_0 [color="#777777", penwidth=0.85];
+laboratories_1 [shape=ellipse, label=<lab_name>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_1 [color="#777777", penwidth=0.85];
+laboratories_2 [shape=ellipse, label=<lab_code (UK)>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_2 [color="#777777", penwidth=0.85];
+laboratories_3 [shape=ellipse, label=<department_id (FK)>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_3 [color="#777777", penwidth=0.85];
+laboratories_4 [shape=ellipse, label=<lab_incharge_id (FK)>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_4 [color="#777777", penwidth=0.85];
+r1 [shape=diamond, label="has members", width=1.18, height=0.72, fontsize=10, margin="0.04,0.02"];
+departments -- r1 [taillabel="1", labeldistance=1.35, labelangle=25];
+r1 -- users [headlabel="N", labeldistance=1.35, labelangle=25];
+r2 [shape=diamond, label="organises", width=1.18, height=0.72, fontsize=10, margin="0.04,0.02"];
+departments -- r2 [taillabel="1", labeldistance=1.35, labelangle=25];
+r2 -- laboratories [headlabel="N", labeldistance=1.35, labelangle=25];
+r3 [shape=diamond, label="in charge of", width=1.18, height=0.72, fontsize=10, margin="0.04,0.02"];
+users -- r3 [taillabel="0..N", labeldistance=1.35, labelangle=25];
+r3 -- laboratories [headlabel="0..1", labeldistance=1.35, labelangle=25];
+
+}

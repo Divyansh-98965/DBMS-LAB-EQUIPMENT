@@ -1,0 +1,80 @@
+:root{--ink:#172033;--muted:#7b8497;--line:#e8ebf1;--paper:#f6f7fb;--navy:#111b31;--blue:#4968e8;--mint:#dff7ef}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:14px}
+.app-shell{display:flex;min-height:100vh}.sidebar{width:250px;background:var(--navy);color:#fff;padding:25px 16px;display:flex;flex-direction:column;flex-shrink:0}
+.brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none;font:800 20px Manrope;margin:0 10px 38px}.brand small{display:block;font:600 9px 'DM Sans';letter-spacing:1.7px;color:#8d9ab4;margin-top:3px}.brand-mark{width:38px;height:38px;background:#526df0;border-radius:12px;display:grid;place-items:center}
+.nav-label{font-size:10px;letter-spacing:1.6px;color:#73809b;font-weight:700;padding:0 12px 12px}.sidebar .nav-link{display:flex;align-items:center;gap:13px;color:#aeb8cc;padding:11px 13px;border-radius:9px;margin:2px 0;text-decoration:none;font-weight:500;transition:.15s}.sidebar .nav-link i{width:18px;text-align:center;font-size:14px}.sidebar .nav-link:hover,.sidebar .nav-link.active{background:#253451;color:#fff}.sidebar .nav-link.active{box-shadow:inset 3px 0 #7187ff}
+.sidebar-bottom{margin-top:auto;border-top:1px solid #2b3851;padding-top:16px}.user-chip{display:flex;align-items:center;gap:10px;padding:8px 9px 15px}.avatar,.top-avatar{width:34px;height:34px;border-radius:50%;background:#dce5ff;color:#344dba;display:grid;place-items:center;font-weight:700}.user-chip strong{display:block;font-size:12px}.user-chip small{color:#8d9ab4;font-size:11px}
+.main-area{min-width:0;flex:1}.topbar{height:92px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 38px}.eyebrow{font-size:9px;letter-spacing:1.7px;color:#9aa2b1;font-weight:700}.topbar h1{font:800 23px Manrope;margin:4px 0 0}.topbar-right{display:flex;align-items:center;gap:9px;color:#7e8798;font-size:12px}.status-dot{width:7px;height:7px;background:#2bb987;border-radius:50%}.top-avatar{margin-left:15px}
+.content{padding:30px 38px;max-width:1600px;margin:auto}.footer{padding:10px 38px 22px;color:#a0a7b4;font-size:11px}.footer span{padding:0 5px}
+.card-panel{background:#fff;border:1px solid var(--line);border-radius:13px;padding:21px;box-shadow:0 3px 14px rgba(20,35,70,.025);margin-bottom:20px}.stat-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:19px 20px;min-height:120px}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:600}.stat-icon{width:34px;height:34px;border-radius:10px;background:#eef1ff;color:#5269df;display:grid;place-items:center}.stat-value{font:800 27px Manrope;margin-top:11px}.stat-note{font-size:11px;color:#9aa2b1;margin-top:3px}
+.section-heading{font:700 15px Manrope;margin:0}.section-sub{font-size:12px;color:var(--muted);margin-top:4px}.table{font-size:12px;vertical-align:middle}.table thead th{color:#929aaa;font-size:10px;letter-spacing:.7px;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--line);padding:12px 10px;white-space:nowrap}.table tbody td{padding:13px 10px;border-color:#f0f1f5}.table tbody tr:last-child td{border-bottom:0}.table-wrap{overflow-x:auto}.badge-soft{display:inline-block;padding:5px 9px;border-radius:30px;background:#eef1ff;color:#4c62c5;font-size:10px;font-weight:700}.badge-green{background:#e5f7ef;color:#21835f}.badge-orange{background:#fff2df;color:#a66b16}.badge-red{background:#ffebeb;color:#bd4b4b}.badge-gray{background:#f0f1f4;color:#697386}
+.btn-primary{background:#4e67e8;border-color:#4e67e8}.btn-primary:hover{background:#3e55d0;border-color:#3e55d0}.btn{border-radius:8px;font-size:12px;font-weight:600;padding:8px 13px}.form-label{font-size:11px;font-weight:700;color:#596276}.form-control,.form-select{font-size:12px;border-color:#e2e6ee;border-radius:8px;padding:9px 11px}.form-control:focus,.form-select:focus{border-color:#8b9af0;box-shadow:0 0 0 .18rem rgba(78,103,232,.12)}
+.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}.searchbox{max-width:280px}.empty-state{text-align:center;color:#9aa2b1;padding:35px}.action-link{color:#5269df;text-decoration:none;font-weight:700}.login-page{min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#111b31,#263c65)}.login-card{width:min(420px,calc(100% - 32px));background:#fff;padding:35px;border-radius:18px;box-shadow:0 25px 80px #0a142c66}.login-logo{font:800 25px Manrope;margin-bottom:8px}.login-muted{color:#8790a1;font-size:12px;margin-bottom:25px}
+@media(max-width:900px){.sidebar{width:70px;padding:20px 9px}.brand{margin:0 6px 30px}.brand>span:last-child,.nav-label,.sidebar .nav-link span,.user-chip>div:last-child{display:none}.sidebar .nav-link{justify-content:center;padding:13px 5px}.sidebar .nav-link i{font-size:16px}.user-chip{justify-content:center;padding:8px 0 15px}.content{padding:22px 18px}.topbar{padding:0 20px}}
+@media(max-width:560px){.topbar{height:76px}.topbar h1{font-size:19px}.topbar-right{font-size:0}.content{padding:17px 12px}.toolbar{align-items:stretch;flex-direction:column}.searchbox{max-width:none}}
+
+/* NSUT academic system refresh: restrained colour, compact tables and fewer decorative effects. */
+:root{--ink:#202a36;--muted:#687585;--line:#dfe4e9;--paper:#f3f5f7;--navy:#172b43;--blue:#244d75;--mint:#e8f0f5}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);font-size:13px;color:var(--ink)}
+.brand{font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:700;letter-spacing:-.3px;margin-bottom:32px}
+.brand small{font-size:8px;letter-spacing:1.2px;color:#b8c5d1}
+.brand-mark{width:39px;height:39px;border-radius:3px;background:#e9edf1;color:#172b43;font:800 11px Arial;letter-spacing:.3px}
+.sidebar{background:#172b43;padding:23px 14px}
+.sidebar .nav-link{border-radius:3px;color:#c2ccd6;padding:10px 12px;font-size:12px}
+.sidebar .nav-link:hover,.sidebar .nav-link.active{background:#29435e;color:#fff;box-shadow:inset 3px 0 #c4d2df}
+.nav-label{letter-spacing:1.1px;font-size:9px;color:#9aabba}.nav-label-spaced{margin-top:25px}
+.topbar{height:82px;padding:0 34px;background:#fff}
+.eyebrow{font-size:9px;letter-spacing:1.1px;color:#718092}
+.topbar h1{font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:700;letter-spacing:-.3px}
+.topbar-institution{font-size:11px;color:#647385;letter-spacing:.4px}
+.top-avatar{border-radius:3px;background:#e7edf2;color:#233d58}
+.content{padding:25px 34px;max-width:1700px}
+.card-panel,.stat-card,.schema-table-card{border:1px solid #dce2e8;border-radius:4px;box-shadow:none;background:#fff}
+.card-panel{padding:19px;margin-bottom:16px}
+.stat-card{padding:16px 17px;min-height:105px}
+.stat-icon{border-radius:3px;background:#edf1f4;color:#385875}
+.stat-value{font-family:Arial,Helvetica,sans-serif;font-size:25px;font-weight:700}
+.stat-note{font-size:10px;color:#8793a0}
+.section-heading{font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700}
+.section-sub{font-size:11px;color:#788593}
+.table{font-size:11px}.table thead th{font-size:9px;letter-spacing:.55px;color:#657383;background:#f7f8fa}
+.table tbody td{padding:10px 9px}
+.btn{border-radius:3px}.btn-primary{background:#294e70;border-color:#294e70}.btn-primary:hover{background:#1d3d5b;border-color:#1d3d5b}
+.form-control,.form-select{border-radius:3px}.badge-soft{border-radius:3px;font-size:9px;letter-spacing:.15px}
+.stat-card,.card-panel,.schema-table-card{transition:none}
+.login-page{background:#e9edf1}.login-card{border-radius:4px;box-shadow:0 8px 28px rgba(23,43,67,.10);border:1px solid #d8dfe6}.login-logo{font:700 27px Arial;color:#172b43}.login-institution{font-size:9px;letter-spacing:1px;color:#647487;font-weight:700;margin-bottom:12px}.login-muted{color:#788593}
+.footer{color:#8793a0;font-size:10px}
+.reference-intro{background:#fff;border:1px solid #dce2e8;border-left:4px solid #294e70;padding:23px 25px;margin-bottom:17px}
+.reference-kicker,.schema-number{font-size:9px;font-weight:700;letter-spacing:1.2px;color:#65788a}
+.reference-intro h2{font:700 25px Arial;margin:7px 0 8px;color:#1d2b39}
+.reference-intro p{max-width:850px;color:#687585;font-size:12px;margin:0}
+.reference-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}
+.reference-meta span{border:1px solid #dce2e8;background:#f7f8fa;padding:6px 9px;font-size:10px;color:#435466}
+.schema-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:17px}
+.schema-summary{background:#fff;border:1px solid #dce2e8;padding:14px 15px;min-height:112px}
+.schema-summary strong,.schema-summary span{display:block}.schema-summary strong{font-size:12px}.schema-summary span{font-size:10px;color:#294e70;margin-top:4px}.schema-summary p{font-size:10px;color:#7b8793;margin:8px 0 0;line-height:1.5}
+.schema-table-card{padding:18px 19px;margin-bottom:15px;min-width:0}
+.schema-table-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:13px}
+.schema-table-head h3,.schema-table-card h3{font:700 16px Arial;margin:4px 0;color:#1d2b39}
+.schema-table-head p{font-size:11px;color:#758290;margin:0;max-width:900px}
+.schema-count{font-size:10px;color:#536679;border:1px solid #dce2e8;padding:5px 8px;white-space:nowrap}
+.schema-column-table{margin-bottom:0}.schema-column-table code,.schema-table-card code{font-size:10px;color:#254e70;background:#f0f3f6;padding:2px 4px;border-radius:2px}
+.schema-table-note{background:#f7f8fa;border-top:1px solid #e5e9ed;padding:11px 12px;font-size:10px;color:#657383;line-height:1.6}
+.schema-table-note strong{color:#34485b}.schema-fk-list{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}.schema-fk-list span{background:#fff;border:1px solid #e0e5e9;padding:4px 6px;color:#3d5266}.schema-fk-list small{color:#85919d}
+.normalization-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.normalization-grid>div{border:1px solid #e0e5e9;padding:12px;background:#fafbfc}.normalization-grid strong{font-size:11px}.normalization-grid p{font-size:10px;line-height:1.55;color:#6e7b88;margin:7px 0 0}
+.schema-caveat{font-size:11px;color:#697786;background:#f7f8fa;border-left:3px solid #8799aa;padding:11px 13px;margin:14px 0 0}
+.er-card{overflow:hidden}.er-scroll{overflow:auto;border:1px solid #e0e5e9;background:#fbfcfd;padding:22px;min-height:500px}.er-scroll .mermaid{min-width:1050px;text-align:center}.er-scroll svg{max-width:none!important;height:auto}.er-legend{display:flex;gap:8px 18px;flex-wrap:wrap;padding-top:14px;font-size:10px;color:#657383}.er-legend b{display:inline-block;color:#294e70;margin-right:4px}.er-notes{padding-left:18px;margin:14px 0 0}.er-notes li{font-size:11px;color:#667483;padding:4px 0;line-height:1.5}.er-notes strong{color:#263e54}
+@media(max-width:900px){.schema-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.normalization-grid{grid-template-columns:1fr}.content{padding:20px 16px}.topbar{padding:0 18px}}
+@media(max-width:560px){.schema-summary-grid{grid-template-columns:1fr}.reference-intro{padding:18px}.schema-table-card{padding:14px}.schema-table-head{flex-direction:column}.er-scroll{padding:10px}}
+
+/* Classic Chen ER notation */
+.chen-legend{display:flex;flex-wrap:wrap;gap:16px 26px;padding:15px 2px 2px;color:#465566;font-size:11px;align-items:center}
+.chen-legend span{display:flex;align-items:center;gap:8px}
+.chen-entity{display:inline-grid;place-items:center;border:1.5px solid #202020;padding:5px 10px;font-style:normal;background:#fff;color:#111}
+.chen-relation{display:inline-grid;place-items:center;border:1.5px solid #202020;padding:5px 10px;transform:rotate(45deg);font-style:normal;background:#fff;color:#111;font-size:9px}
+.chen-attribute{display:inline-grid;place-items:center;border:1.5px solid #202020;border-radius:50%;padding:6px 10px;font-style:normal;background:#fff;color:#111}
+.er-chen-card{overflow:hidden}
+.chen-diagram-wrap{width:100%;overflow:auto;background:#fff;border:1px solid #e1e5e9;padding:14px;text-align:center}
+.chen-diagram-wrap img{display:block;width:100%;height:auto;min-width:760px;max-width:1600px;margin:0 auto}
+@media(max-width:700px){.chen-diagram-wrap{padding:8px}.chen-diagram-wrap img{min-width:900px}.chen-legend{gap:12px}}

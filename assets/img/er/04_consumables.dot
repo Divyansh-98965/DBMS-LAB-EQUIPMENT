@@ -1,0 +1,44 @@
+graph ER {
+graph [rankdir=LR, splines=polyline, nodesep=0.42, ranksep=0.72, pad=0.25, bgcolor="white", labelloc=t, labeljust=l, fontname="Arial", fontsize=22, fontcolor="#172b43"];
+node [fontname="Arial", fontsize=12, color="#202020", fontcolor="#111111", penwidth=1.35, style="filled", fillcolor="white", margin="0.12,0.08"];
+edge [fontname="Arial", fontsize=10, color="#333333", fontcolor="#333333", penwidth=1.1, dir=none];
+ labelloc=t; label="04  CONSUMABLE STOCK";
+suppliers [shape=box, label="Suppliers", width=1.55, height=0.62, penwidth=1.7];
+suppliers_0 [shape=ellipse, label=<<U>supplier_id</U>>, fontsize=10, margin="0.09,0.05"];
+suppliers -- suppliers_0 [color="#777777", penwidth=0.85];
+suppliers_1 [shape=ellipse, label=<supplier_name>, fontsize=10, margin="0.09,0.05"];
+suppliers -- suppliers_1 [color="#777777", penwidth=0.85];
+suppliers_2 [shape=ellipse, label=<email>, fontsize=10, margin="0.09,0.05"];
+suppliers -- suppliers_2 [color="#777777", penwidth=0.85];
+suppliers_3 [shape=ellipse, label=<gstin (UK)>, fontsize=10, margin="0.09,0.05"];
+suppliers -- suppliers_3 [color="#777777", penwidth=0.85];
+laboratories [shape=box, label="Laboratories", width=1.55, height=0.62, penwidth=1.7];
+laboratories_0 [shape=ellipse, label=<<U>lab_id</U>>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_0 [color="#777777", penwidth=0.85];
+laboratories_1 [shape=ellipse, label=<lab_name>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_1 [color="#777777", penwidth=0.85];
+laboratories_2 [shape=ellipse, label=<lab_code (UK)>, fontsize=10, margin="0.09,0.05"];
+laboratories -- laboratories_2 [color="#777777", penwidth=0.85];
+consumables [shape=box, label="Consumables", width=1.55, height=0.62, penwidth=1.7];
+consumables_0 [shape=ellipse, label=<<U>consumable_id</U>>, fontsize=10, margin="0.09,0.05"];
+consumables -- consumables_0 [color="#777777", penwidth=0.85];
+consumables_1 [shape=ellipse, label=<item_code (UK)>, fontsize=10, margin="0.09,0.05"];
+consumables -- consumables_1 [color="#777777", penwidth=0.85];
+consumables_2 [shape=ellipse, label=<item_name>, fontsize=10, margin="0.09,0.05"];
+consumables -- consumables_2 [color="#777777", penwidth=0.85];
+consumables_3 [shape=ellipse, label=<lab_id (FK)>, fontsize=10, margin="0.09,0.05"];
+consumables -- consumables_3 [color="#777777", penwidth=0.85];
+consumables_4 [shape=ellipse, label=<supplier_id (FK)>, fontsize=10, margin="0.09,0.05"];
+consumables -- consumables_4 [color="#777777", penwidth=0.85];
+consumables_5 [shape=ellipse, label=<quantity_available>, fontsize=10, margin="0.09,0.05"];
+consumables -- consumables_5 [color="#777777", penwidth=0.85];
+consumables_6 [shape=ellipse, label=<reorder_level>, fontsize=10, margin="0.09,0.05"];
+consumables -- consumables_6 [color="#777777", penwidth=0.85];
+r1 [shape=diamond, label="supplies", width=1.18, height=0.72, fontsize=10, margin="0.04,0.02"];
+suppliers -- r1 [taillabel="1", labeldistance=1.35, labelangle=25];
+r1 -- consumables [headlabel="N", labeldistance=1.35, labelangle=25];
+r2 [shape=diamond, label="stores", width=1.18, height=0.72, fontsize=10, margin="0.04,0.02"];
+laboratories -- r2 [taillabel="1", labeldistance=1.35, labelangle=25];
+r2 -- consumables [headlabel="N", labeldistance=1.35, labelangle=25];
+
+}
