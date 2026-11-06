@@ -1,8 +1,8 @@
-# LabTrace — NSUT Laboratory Management
+# LabTrace — Laboratory Equipment Management
 
-A PHP + SQLite laboratory equipment and inventory management website prepared for an NSUT academic DBMS project. The application uses a local SQLite database file and does not require XAMPP, MySQL, MariaDB or phpMyAdmin.
+A PHP + SQLite laboratory equipment and inventory management website prepared for an  academic DBMS project. The application uses a local SQLite database file and does not require XAMPP, MySQL, MariaDB or phpMyAdmin.
 
-The NSUT-labelled sample departments, laboratories, people, equipment and transactions are illustrative demonstration records, not an official NSUT inventory.
+The  sample departments, laboratories, people, equipment and transactions are illustrative demonstration records..
 
 ## Requirements
 
